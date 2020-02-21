@@ -1,8 +1,8 @@
-package controllers;
+package com.example.wbdvsp20jiawenlispringserver.controller;
 
-import models.Widget;
+import com.example.wbdvsp20jiawenlispringserver.models.Widget;
 import org.springframework.web.bind.annotation.*;
-import services.WidgetService;
+import com.example.wbdvsp20jiawenlispringserver.services.WidgetService;
 
 import java.util.List;
 

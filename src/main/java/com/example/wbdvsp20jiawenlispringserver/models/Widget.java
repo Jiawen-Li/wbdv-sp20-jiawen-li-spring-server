@@ -1,4 +1,4 @@
-package models;
+package com.example.wbdvsp20jiawenlispringserver.models;
 
 
 public class Widget {

@@ -1,6 +1,6 @@
-package services;
+package com.example.wbdvsp20jiawenlispringserver.services;
 
-import models.Widget;
+import com.example.wbdvsp20jiawenlispringserver.models.Widget;
 
 import java.util.ArrayList;
 import java.util.List;
