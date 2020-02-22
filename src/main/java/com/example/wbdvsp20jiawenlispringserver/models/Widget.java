@@ -6,11 +6,11 @@ public class Widget {
     private String name = "emptyName";
     private String id;
     private String tid;
-    private String type;
+    private String type="HEADING";
     private int order;
     private String text;
     private String url;
-    private int size;
+    private int size=1;
     private int width;
     private int height;
     private String cssClass;
