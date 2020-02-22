@@ -3,7 +3,7 @@ package com.example.wbdvsp20jiawenlispringserver.models;
 
 public class Widget {
 
-    private String name;
+    private String name = "emptyName";
     private String id;
     private String tid;
     private String type;
@@ -15,7 +15,7 @@ public class Widget {
     private int height;
     private String cssClass;
     private String style;
-    private String value;
+    private String value = "emptyValue";
 
     public Widget() {
     }
