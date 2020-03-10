@@ -1,132 +1,136 @@
 package com.example.wbdvsp20jiawenlispringserver.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "widgets")
 public class Widget {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private String name = "emptyName";
-    private String id;
-    private String tid;
-    private String type="HEADING";
-    private int order;
+    private Integer id;
+
+    @ManyToOne
+    @JsonIgnore
+    private Topic topic;
+
+    private String name;
+    private String type;
+    private Integer order;
     private String text;
     private String url;
-    private int size=1;
-    private int width;
-    private int height;
+    private Integer size = 2;
+    private Integer width;
+    private Integer height;
     private String cssClass;
-    private String style;
-    private String value = "emptyValue";
+    private String style = "Heading";
+    private String value;
 
-    public Widget() {
+    public Integer getId() {
+        return id;
     }
 
-    public Widget(String name, String id) {
-        this.name = name;
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Topic getTopic() {
+        return topic;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setOrder(int order) {
-        this.order = order;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public void setCssClass(String cssClass) {
-        this.cssClass = cssClass;
-    }
-
-    public void setStyle(String style) {
-        this.style = style;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getType() {
         return type;
     }
 
-    public int getOrder() {
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Integer getOrder() {
         return order;
+    }
+
+    public void setOrder(Integer order) {
+        this.order = order;
     }
 
     public String getText() {
         return text;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
     public String getUrl() {
         return url;
     }
 
-    public int getSize() {
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Integer getSize() {
         return size;
     }
 
-    public int getWidth() {
+    public void setSize(Integer size) {
+        this.size = size;
+    }
+
+    public Integer getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    public void setWidth(Integer width) {
+        this.width = width;
+    }
+
+    public Integer getHeight() {
         return height;
+    }
+
+    public void setHeight(Integer height) {
+        this.height = height;
     }
 
     public String getCssClass() {
         return cssClass;
     }
 
+    public void setCssClass(String cssClass) {
+        this.cssClass = cssClass;
+    }
+
     public String getStyle() {
         return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
     }
 
     public String getValue() {
         return value;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public String getTid() {
-        return tid;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setTid(String tid) {
-        this.tid = tid;
+    public void setValue(String value) {
+        this.value = value;
     }
 }
+
+
