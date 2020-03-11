@@ -1,4 +1,4 @@
-package repositories;
+package com.example.wbdvsp20jiawenlispringserver.repositories;
 
 import com.example.wbdvsp20jiawenlispringserver.models.Topic;
 import com.example.wbdvsp20jiawenlispringserver.models.Widget;
@@ -18,5 +18,5 @@ public interface WidgetRepository
     public List<Topic> findWidgetForTopic(@Param("tid") Integer topicId);
 
     @Query(value = "SELECT * from widgets where widgets.id =:wid", nativeQuery = true)
-    public Widget findWidgetById(@Param("wid") String widgetId);
+    public Widget findWidgetById(@Param("wid") Integer widgetId);
 }
