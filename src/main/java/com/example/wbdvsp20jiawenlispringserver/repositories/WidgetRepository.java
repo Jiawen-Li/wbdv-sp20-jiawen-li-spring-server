@@ -15,7 +15,7 @@ public interface WidgetRepository
     public List<Widget> findAllWidgets();
 
     @Query(value = "SELECT * from widgets where widgets.topic_id =:tid", nativeQuery = true)
-    public List<Topic> findWidgetForTopic(@Param("tid") Integer topicId);
+    public List<Widget> findWidgetForTopic(@Param("tid") Integer topicId);
 
     @Query(value = "SELECT * from widgets where widgets.id =:wid", nativeQuery = true)
     public Widget findWidgetById(@Param("wid") Integer widgetId);

@@ -23,7 +23,7 @@ public class WidgetService {
         return widgetRepository.save(widget);
     }
 
-    public List<Topic> findWidgetsForTopic(int tid){
+    public List<Widget> findWidgetsForTopic(int tid){
         return widgetRepository.findWidgetForTopic(tid);
     }
 
