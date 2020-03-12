@@ -55,5 +55,8 @@ public class Topic {
     public void setWidgets(List<Widget> widgets) {
         this.widgets = widgets;
     }
+
+    public Topic() {
+    }
 }
 

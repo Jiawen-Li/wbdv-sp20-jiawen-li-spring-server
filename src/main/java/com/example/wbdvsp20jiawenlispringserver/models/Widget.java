@@ -9,7 +9,6 @@ import javax.persistence.*;
 public class Widget {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
 
     @ManyToOne
@@ -21,7 +20,7 @@ public class Widget {
     private Integer order;
     private String text;
     private String url;
-    private Integer size = 2;
+    private Integer size;
     private Integer width;
     private Integer height;
     private String cssClass;
@@ -130,6 +129,9 @@ public class Widget {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public Widget() {
     }
 }
 
