@@ -14,7 +14,7 @@ public interface TopicRepository
     @Query(value = "SELECT * from topics", nativeQuery = true)
     public List<Topic> findAllTopics();
 
-    @Query(value = "SELECT * from topics where topics.lessonId = :lid", nativeQuery = true)
+    @Query(value = "SELECT * from topics where topics.lesson_id = :lid", nativeQuery = true)
     public List<Topic> findTopicForLesson(@Param("lid") String lessonId);
 
     @Query(value = "SELECT * from topics where topics.id = :tid", nativeQuery = true)
