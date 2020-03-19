@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class WidgetService {
@@ -28,13 +29,19 @@ public class WidgetService {
     }
 
     public int updateWidget(int wid, Widget widget){
-        try {
+        Optional<Widget> oldWidget = widgetRepository.findById(wid);
+        if(oldWidget.isPresent()){
             widget.setId(wid);
-            widgetRepository.save(widget);
-            return 1;
-        } catch (Exception e) {
-            return 0;
+            widget.setTopic(oldWidget.get().getTopic());
+            try {
+                widgetRepository.save(widget);
+                return 1;
+            } catch (Exception e) {
+                return 0;
+            }
         }
+        return 0;
+
     }
 
     public int deleteWidget(int wid){
